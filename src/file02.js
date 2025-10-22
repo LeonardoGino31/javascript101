@@ -15,13 +15,22 @@ const frameworks = [
   "Stimulus|6 de marzo de 2018|150,000|25%",
   "Solid|5 de julio de 2021|250,000|80%"
 ];
+for(let i=0;i<frameworks.length;i++){
+  var [nombreF,fechaL,numeroU,porcentajeP]=frameworks[i].split("|").map(v => v.trim());;
+  var frameworkObj = {
+    frameworkName : nombreF,
+    releaseDate :fechaL,
+    usersName:numeroU,
+    popularityPercentage:porcentajeP
+  };
 
+  addRow(frameworkObj,"data-frameworks");
+}
 /**
  * TO-DO:
  *
  * 1. Itere el arreglo frameworks.
  *    Referencia: https://javascript.info/array#loops
- * 
  * 2. En cada iteración:
  *
  *    Tome una cadena del arreglo y divídala en partes usando el separador "|".
@@ -34,7 +43,7 @@ const frameworks = [
  *    - frameworkName
  *    - releaseDate
  *    - usersName
- *    - popularityPercentage
+ *    - popularityPerce
  *    Referencia: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_Objects
  * 
  *    Asegúrese de eliminar los espacios en blanco alrededor de cada valor usando `.trim()`.
@@ -43,4 +52,3 @@ const frameworks = [
  *    LlamE a la función addRow pasando el objeto frameworkObj y el ID del cuerpo de la tabla "data-frameworks",
  *    para agregar una nueva fila con estos datos al cuerpo de la tabla HTML.
  */
-

@@ -1,11 +1,11 @@
+"use strict";
+import { setTitle } from './functions';
 /**
  * TO-DO: 
  * Agregue "use strict"; al inicio de su archivo JavaScript para activar el modo estricto.
  * El modo estricto ayuda a detectar errores comunes y mejora la seguridad del código.
  * Referencia: https://javascript.info/strict-mode
  */
-
-
 
 /** 
  * TO-DO: 
@@ -21,8 +21,11 @@
  * Asigne a la variable local pageId (ID del elemento HTML donde se mostrará el título) con el valor: "title".
  * Referencia: https://javascript.info/variables
  */
-
+let pageTitle = "Datos comparativos de frameworks JavaScript modernos";
+let pageId = "title";
 
 
 // TO-DO: Llama a la función setTitle para establecer el contenido del elemento HTML con el ID especificado
 
+
+setTitle(pageId,pageTitle);
